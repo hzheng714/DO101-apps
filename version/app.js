@@ -5,7 +5,10 @@ var response;
 
 app.get('/', function (req, res) {
 
-    response = 'This is version 2 of the app.' + '\n';
+    const COLOR_SCHEMA = process.env.COLOR_SCHEMA;
+    const API_KEY = process.env.API_KEY;
+
+    response = `This is version 3 of the app. Color Schema: ${COLOR_SCHEMA}, API Key is ${API_KEY}` + '\n';
 
     //send the response to the client
     res.send(response);
